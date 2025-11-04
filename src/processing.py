@@ -1,6 +1,4 @@
-from typing import Union
-
-def filter_by_state(list_input, state='EXECUTED'):
+def filter_by_state(list_input: list, state="EXECUTED") -> list:
     """принимает список словарей и опционально значение для ключа state
     (по умолчанию 'EXECUTED').
     Функция возвращает новый список словарей, содержащий только те словари, у которых ключ
@@ -8,13 +6,13 @@ def filter_by_state(list_input, state='EXECUTED'):
     list_output = []
     i = 0
     while i < len(list_input):
-        if list_input[i]['state'] == state:
+        if list_input[i]["state"] == state:
             list_output.append(list_input[i])
         i += 1
     return list_output
 
 
-def sort_by_date(list_input, desc=True):
+def sort_by_date(list_input: list, desc=True) -> list:
     """принимает список словарей и необязательный параметр, задающий порядок сортировки
     (по умолчанию — убывание). Функция должна возвращать новый список, отсортированный по дате
     (date)."""
