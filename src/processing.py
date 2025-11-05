@@ -4,11 +4,11 @@ def filter_by_state(list_input: list, state="EXECUTED") -> list:
     Функция возвращает новый список словарей, содержащий только те словари, у которых ключ
     state соответствует указанному значению."""
     list_output = []
-    i = 0
-    while i < len(list_input):
-        if list_input[i]["state"] == state:
-            list_output.append(list_input[i])
-        i += 1
+    list_index = 0
+    while list_index < len(list_input):
+        if list_input[list_index]["state"] == state:
+            list_output.append(list_input[list_index])
+        list_index += 1
     return list_output
 
 
